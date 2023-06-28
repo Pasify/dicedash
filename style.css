@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
+:root {
+  --bpSmall: 37.5em;
+}
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +12,9 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  @media only screen and (max-width: 400px) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -21,23 +27,30 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 2rem 5rem;
 }
 
 /* LAYOUT */
 main {
   outline: 2px solid white;
   position: relative;
-  width: 100rem;
-  height: 60rem;
+  width: 100%;
+  height: 100%;
+  min-height: 80%;
+  /* max-height: max-content;
+  min-height: max-content; */
   background-color: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(200px);
-  -webkit-backdrop-filter:blur(200px);
+  -webkit-backdrop-filter: blur(200px);
   filter: blur();
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
   border-radius: 9px;
   overflow: hidden;
   display: flex;
+  flex-wrap: wrap;
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+  }
 }
 
 .player {
@@ -46,7 +59,13 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   transition: all 0.75s;
+  gap: 1rem;
+  @media only screen and (max-width: 600px) {
+    height: 50%;
+    padding: 2rem;
+  }
 }
 
 /* ELEMENTS */
@@ -57,14 +76,20 @@ main {
   letter-spacing: 1px;
   word-spacing: 2px;
   font-weight: 300;
-  margin-bottom: 1rem;
+
+  @media only screen and (max-width: 400px) {
+    font-size: 2rem;
+  }
 }
 
 .score {
   font-size: 8rem;
   font-weight: 300;
   color: #c7365f;
-  margin-bottom: auto;
+
+  @media only screen and (max-width: 400px) {
+    font-size: 4rem;
+  }
 }
 
 .player--active {
@@ -90,6 +115,11 @@ main {
   padding: 2rem;
   text-align: center;
   transition: all 0.75s;
+  @media only screen and (max-width: 600px) {
+    font-size: 2rem;
+    padding: 1rem;
+    width: auto;
+  }
 }
 
 .current-label {
@@ -121,7 +151,7 @@ main {
   background-color: white;
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter:blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
   padding: 0.7rem 2.5rem;
   border-radius: 50rem;
@@ -131,22 +161,48 @@ main {
 .btn::first-letter {
   font-size: 2.4rem;
   display: inline-block;
-  margin-right: 0.7rem;
+  /* margin-right: 0.7rem; */
 }
 
 .btn--new {
   top: 4rem;
+  @media only screen and (max-width: 600px) {
+    top: 1rem;
+    right: 0rem;
+  }
 }
 .btn--roll {
+  background-color: #0b0a0b;
   top: 39.3rem;
+  @media only screen and (max-width: 600px) {
+    /* padding: 2rem 0rem; */
+    width: max-content;
+    height: max-content;
+    margin: 0;
+    right: 1rem;
+    top: 50%;
+    transform: translate(10rem, -2rem);
+  }
 }
+
 .btn--hold {
   top: 46.1rem;
+  /* align-self: center; */
+  @media only screen and (max-width: 600px) {
+    bottom: 1rem;
+    top: auto;
+  }
 }
 
 .btn:active {
-  transform: translate(-50%, 3px);
+  transform: translate(-50%, 1px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.btn--roll:active {
+  @media only screen and (max-width: 600px) {
+    transform: translate(10rem, -1rem);
+  }
 }
 
 .btn:focus {
@@ -160,6 +216,12 @@ main {
   transform: translateX(-50%);
   height: 10rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  @media only screen and (max-width: 600px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .player--winner {
@@ -175,22 +237,22 @@ main {
   display: none;
 }
 
-.copyright__container{
+.copyright__container {
   margin: 1rem;
-  color:#444;
+  color: #444;
   display: flex;
   align-items: center;
 
   background-color: rgba(255, 255, 255, 0.4);
   font-size: 1.5rem;
   border-radius: 1rem;
-  padding:1rem
+  padding: 1rem;
 }
-.twitter-link{
+.twitter-link {
   /* text-decoration: none; */
   color: currentColor;
   cursor: pointer;
 }
-.twitter-link:hover{
+.twitter-link:hover {
   transform: scale(1.5, 1.5);
 }
