@@ -1,8 +1,8 @@
+:root {
+  --bp-small: 25em;
+}
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
-:root {
-  --bpSmall: 37.5em;
-}
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 25em) {
     font-size: 40%;
   }
 }
@@ -30,7 +30,7 @@ body {
   gap: 1rem;
   padding: 2rem 5rem;
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 25em) {
     padding: 2rem 2rem;
   }
 }
@@ -53,7 +53,7 @@ main {
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 25em) {
     flex-direction: column;
   }
 }
@@ -67,7 +67,7 @@ main {
   justify-content: center;
   transition: all 0.75s;
   gap: 1rem;
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 25em) {
     height: 50%;
     padding: 2rem;
   }
@@ -82,7 +82,7 @@ main {
   word-spacing: 2px;
   font-weight: 300;
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 25em) {
     font-size: 2rem;
   }
 }
@@ -92,7 +92,7 @@ main {
   font-weight: 300;
   color: #c7365f;
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 25em) {
     font-size: 4rem;
   }
 }
@@ -120,7 +120,7 @@ main {
   padding: 2rem;
   text-align: center;
   transition: all 0.75s;
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 25em) {
     font-size: 2rem;
     padding: 1rem;
     width: auto;
@@ -171,7 +171,7 @@ main {
 
 .btn--new {
   top: 4rem;
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 25em) {
     top: 1rem;
     right: 0rem;
   }
@@ -179,7 +179,7 @@ main {
 .btn--roll {
   background-color: #0b0a0b;
   top: 39.3rem;
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 25em) {
     /* padding: 2rem 0rem; */
     width: max-content;
     height: max-content;
@@ -193,7 +193,7 @@ main {
 .btn--hold {
   top: 46.1rem;
   /* align-self: center; */
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 25em) {
     bottom: 1rem;
     top: auto;
   }
@@ -205,7 +205,7 @@ main {
 }
 
 .btn--roll:active {
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 25em) {
     transform: translate(10rem, -1rem);
   }
 }
@@ -221,7 +221,7 @@ main {
   transform: translateX(-50%);
   height: 10rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 25em) {
     position: absolute;
     top: 50%;
     left: 50%;
