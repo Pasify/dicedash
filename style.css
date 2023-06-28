@@ -27,7 +27,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem 5rem;
+  gap: 1rem;
+
+  @media only screen and (max-width: 400px) {
+    padding: 2rem 2rem;
+  }
 }
 
 /* LAYOUT */
@@ -48,7 +52,7 @@ main {
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 400px) {
     flex-direction: column;
   }
 }
@@ -62,7 +66,7 @@ main {
   justify-content: center;
   transition: all 0.75s;
   gap: 1rem;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 400px) {
     height: 50%;
     padding: 2rem;
   }
@@ -115,7 +119,7 @@ main {
   padding: 2rem;
   text-align: center;
   transition: all 0.75s;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 400px) {
     font-size: 2rem;
     padding: 1rem;
     width: auto;
@@ -166,7 +170,7 @@ main {
 
 .btn--new {
   top: 4rem;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 400px) {
     top: 1rem;
     right: 0rem;
   }
@@ -174,7 +178,7 @@ main {
 .btn--roll {
   background-color: #0b0a0b;
   top: 39.3rem;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 400px) {
     /* padding: 2rem 0rem; */
     width: max-content;
     height: max-content;
@@ -188,7 +192,7 @@ main {
 .btn--hold {
   top: 46.1rem;
   /* align-self: center; */
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 400px) {
     bottom: 1rem;
     top: auto;
   }
@@ -200,7 +204,7 @@ main {
 }
 
 .btn--roll:active {
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 400px) {
     transform: translate(10rem, -1rem);
   }
 }
@@ -216,7 +220,7 @@ main {
   transform: translateX(-50%);
   height: 10rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 400px) {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -238,8 +242,7 @@ main {
 }
 
 .copyright__container {
-  margin: 1rem;
-  color: #444;
+  color: #ffffff;
   display: flex;
   align-items: center;
 
