@@ -1,0 +1,20 @@
+{
+  "name": "dicedash",
+  "version": "1.0.0",
+  "description": "The Game is a simple dice game in which players take turns rolling a single die to score points. The goal of the game is to be the first player to reach a certain number of points, typically 100.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "sass sass/main.scss style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pasify/dicedash.git"
+  },
+  "author": "paskkal.io",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pasify/dicedash/issues"
+  },
+  "homepage": "https://github.com/Pasify/dicedash#readme"
+}
