@@ -13,7 +13,7 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
   @media only screen and (max-width: 400px) {
-    font-size: 50%;
+    font-size: 40%;
   }
 }
 
@@ -28,6 +28,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  padding: 2rem 5rem;
 
   @media only screen and (max-width: 400px) {
     padding: 2rem 2rem;
